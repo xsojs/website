@@ -1,0 +1,43 @@
+{
+    "name": "@xso/website",
+    "version": "0.1.0",
+    "description": "Website of the XSO.",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Eduardo Velasques",
+    "license": "MIT",
+    "repository": "xsojs/website",
+    "keywords": [
+        "react",
+        "vue",
+        "jquery",
+        "css",
+        "less",
+        "sass",
+        "scss",
+        "style",
+        "stylex",
+        "simple",
+        "util",
+        "utility"
+    ],
+    "dependencies": {
+        "@xso/com": "link:../com",
+        "@xso/css": "link:../css",
+        "@xso/utils": "link:../utils",
+        "@xso/router": "link:../router",
+        "highlight.js": "^11.9.0"
+    },
+    "devDependencies": {
+        "vite": "^4.3.9"
+    },
+    "files": [
+        "dist",
+        "src"
+    ]
+}
