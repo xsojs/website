@@ -5,6 +5,10 @@ import theme from "../../styles/theme";
 import styles from "./styles";
 import { Navigate } from "@xso/router";
 
+import Menu from "../../components/Menu";
+
+const {SubMenu, Item} = Menu;
+
 function Aside() {
     this.view(() => [
         { aside: {
@@ -21,6 +25,49 @@ function Aside() {
                 { nav: {
                     class: css(styles.navigation),
                     _: [
+                        { [Menu]: {
+                            _: [
+                                { [Item]: {
+                                    _: { [Navigate]: {
+                                        to: '/',
+                                        activeClass: 'active',
+                                        _: 'Home'
+                                    } }
+                                }},
+                                { [Item]: {
+                                    _: [
+                                        { [Navigate]: {
+                                            to: '/framework',
+                                            _: 'Framework'
+                                        } }
+                                    ],
+                                    subMenu: {
+                                        [SubMenu]: {
+                                            _: [
+                                                { [Item]: {
+                                                    _: { [Navigate]: {
+                                                        to: '/framework/com',
+                                                        _: 'Components'
+                                                    } }
+                                                }},
+                                                { [Item]: {
+                                                    _: { [Navigate]: {
+                                                        to: '/framework/css',
+                                                        _: 'CSS'
+                                                    } }
+                                                }},
+                                                { [Item]: {
+                                                    _: { [Navigate]: {
+                                                        to: '/framework/router',
+                                                        _: 'Router'
+                                                    } }
+                                                }},
+                                            ]
+                                        }
+                                    }
+                                }}
+                            ]
+                        } },
                         { ul: {
                             _: [
                                 { li: {
