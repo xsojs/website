@@ -1,64 +1,67 @@
 import com from "@xso/com";
 import css from "@xso/css";
 
+import Grid from "../../components/Grid";
 import Title from "../../components/Title";
 import CodeTabs from "../../components/CodeTabs";
 
 import theme from "../../styles/theme";
 
+import styles from "./styles";
+
+const {Row, Col} = Grid;
+
 function Home() {
     this.view(() => [
-        { div: {
+        { div: { // main
             class: css(theme.frame),
             _: [
-                { div: {
+                { [Title]: {
+                    content: 'UI Framework'
+                } },
+                { [Row]: {
                     _: [
-                        { p: {
-                            _: 'A reactive UI framework, pure JavaScript, no compilations, and all in one.'
+                        { [Col]: {
+                            align: 'center',
+                            _: [
+                                { img: {
+                                    class: css(styles.images),
+                                    src: 'images/lightning.svg'
+                                } },
+                                { p: {
+                                    _: 'Reactive Without Compilation'
+                                } }
+                            ]
                         } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
+                        { [Col]: {
+                            align: 'center',
+                            _: [
+                                { img: {
+                                    class: css(styles.images),
+                                    src: 'images/js.svg'
+                                } },
+                                { p: {
+                                    _: 'Pure JavaScript Code'
+                                } }
+                            ]
                         } },
                     ]
                 } },
+                { div: { // introduction
+                    _: [
+                        { p: {
+                            _: 'Here you will find a reactive UI framework, where all code is in pure JavaScript only, nothing is compiled, and you have all you need.'
+                        } },
+                        { p: {
+                            _: 'All you need means Components, States, Properties, References, Global Events, a CSS engine, a Router, and much more.'
+                        } },
+                    ]
+                } }, // div.introduction
                 { [Title]: {
-                    content: 'Basic Example'
+                    content: 'Firt Look'
+                } },
+                { p: {
+                    _: 'See this basic example very carefully.'
                 } },
                 { [CodeTabs]: {
                     tabs: [
@@ -78,22 +81,18 @@ function Home() {
                                         refText.current.style.border = '2px solid gray';
                                     });
                                     this.view(() => [
-                                        {
-                                            button: {
-                                                onClick: ()=> { counter.$value++; },
-                                                _: \`Click \${counter}\`
-                                            }
-                                        },
-                                        refText.set({
-                                            div: {
-                                                class: css(styles.text),
-                                                _: content
-                                            }
-                                        })
+                                        { button: {
+                                            onClick: ()=> { counter.$value++; },
+                                            _: \`Click \${counter}\`
+                                        } },
+                                        refText.set({ div: {
+                                            class: css(styles.text),
+                                            _: content
+                                        } })
                                     ]);
                                 }
                             `
-                        } },
+                        } }, // CodeTabs.Tab[0]
                         { [CodeTabs.Tab]: {
                             label: 'styles.js',
                             source: `
@@ -111,11 +110,20 @@ function Home() {
 
                                 export default styles;
                             `
-                        } }
+                        } } // CodeTabs.Tab[1]
                     ]
-                } }
+                } }, // CodeTabs
+                { p: {
+                    _: 'You may be thinking: Is all integrated in a single code language!?'
+                } },
+                { p: {
+                    _: `Yes is it! Let's put your hands and see it.`
+                } },
+                { p: {
+                    _: 'All JavaScript capabilities are available to anything and anywhere in your code.'
+                } },
             ]
-        } }
+        } } // div.main
     ]);
 }
 

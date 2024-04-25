@@ -27,12 +27,10 @@ function CodeBlock({source}) {
         hljs.highlightElement(ref.current);
     });
     this.view(() => [
-        ref.set({
-            pre: {
-                class: css(styles.codeBlock),
-                _: finalSource.trim()
-            }
-        })
+        ref.set({ pre: {
+            class: css(styles.codeBlock),
+            _: finalSource.trim()
+        } })
     ]);
 }
 

@@ -14,147 +14,69 @@ function Aside() {
         { aside: {
             class: css(theme.aside, styles.aside),
             _: [
-                { div: {
+                { div: { // logo
                     class: css(styles.logo),
-                    _: [{
-                        img: {
+                    _: [
+                        { img: {
                             src: '/images/logo.svg'
-                        }
-                    }]
-                } },
+                        } }
+                    ]
+                } }, // div.logo
                 { nav: {
                     class: css(styles.navigation),
                     _: [
                         { [Menu]: {
                             _: [
-                                { [Item]: {
+                                { [Item]: { // Home
                                     _: { [Navigate]: {
                                         to: '/',
                                         activeClass: 'active',
                                         _: 'Home'
                                     } }
-                                }},
-                                { [Item]: {
+                                }}, // Item.Home
+                                { [Item]: { // Framework
                                     _: [
                                         { [Navigate]: {
                                             to: '/framework',
                                             _: 'Framework'
                                         } }
                                     ],
-                                    subMenu: {
-                                        [SubMenu]: {
-                                            _: [
-                                                { [Item]: {
-                                                    _: { [Navigate]: {
-                                                        to: '/framework/com',
-                                                        _: 'Components'
-                                                    } }
-                                                }},
-                                                { [Item]: {
-                                                    _: { [Navigate]: {
-                                                        to: '/framework/css',
-                                                        _: 'CSS'
-                                                    } }
-                                                }},
-                                                { [Item]: {
-                                                    _: { [Navigate]: {
-                                                        to: '/framework/router',
-                                                        _: 'Router'
-                                                    } }
-                                                }},
-                                            ]
-                                        }
-                                    }
-                                }}
-                            ]
-                        } },
-                        { ul: {
-                            _: [
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/',
-                                            activeClass: 'active',
-                                            _: 'Home'
-                                        } }
-                                    ]
-                                }},
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/framework',
-                                            _: 'Framework'
-                                        } },
-                                        { ul: {
-                                            _: [
-                                                { li: {
-                                                    _: [ { [Navigate]: {
-                                                        to: '/framework/com',
-                                                        _: 'Components'
-                                                    } } ]
-                                                } },
-                                                { li: {
-                                                    _: [ { [Navigate]: {
-                                                        to: '/framework/css',
-                                                        _: 'CSS'
-                                                    } } ]
-                                                } },
-                                                { li: {
-                                                    _: [ { [Navigate]: {
-                                                        to: '/framework/router',
-                                                        _: 'CSS'
-                                                    } } ]
+                                    subMenu: { [SubMenu]: {
+                                        _: [
+                                            { [Item]: { // Components
+                                                _: { [Navigate]: {
+                                                    to: '/framework/com',
+                                                    _: 'Components'
                                                 } }
-                                            ]
-                                        } }
-                                    ]
-                                }},
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/about',
-                                            _: 'About'
-                                        } }
-                                    ]
-                                }},
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/about',
-                                            _: 'About'
-                                        } }
-                                    ]
-                                }},
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/about',
-                                            _: 'About'
-                                        } }
-                                    ]
-                                }},
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/about',
-                                            _: 'About'
-                                        } }
-                                    ]
-                                }},
-                                { li: {
-                                    _: [
-                                        { [Navigate]: {
-                                            to: '/about',
-                                            _: 'About'
-                                        } }
-                                    ]
-                                }}
+                                            }}, // Item.Components
+                                            { [Item]: { // CSS
+                                                _: { [Navigate]: {
+                                                    to: '/framework/css',
+                                                    _: 'CSS'
+                                                } }
+                                            }}, // Item.CSS
+                                            { [Item]: { // Router
+                                                _: { [Navigate]: {
+                                                    to: '/framework/router',
+                                                    _: 'Router'
+                                                } }
+                                            }}, // Item.Router
+                                        ]
+                                    } } // SubMenu
+                                }}, // Item.Framework
+                                { [Item]: { // Home
+                                    _: { [Navigate]: {
+                                        to: '/about',
+                                        activeClass: 'active',
+                                        _: 'About'
+                                    } }
+                                }}, // Item.Home
                             ]
-                        }}
+                        } } // Menu
                     ]
-                }}
+                }} // nav
             ]
-        } }
+        } } // aside
     ]);
 }
 
