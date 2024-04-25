@@ -37,8 +37,12 @@ Menu.SubMenu = com(function ({active, _}) {
     this.view(()=> {
         if (visible.val) {
             return [
-                { ul: {
-                    _
+                { li: {
+                    _: [
+                        { ul: {
+                            _
+                        } }
+                    ]
                 } }
             ];
         }

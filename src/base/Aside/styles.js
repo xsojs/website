@@ -1,5 +1,24 @@
 import theme from "../../styles/theme";
 
+const ul = {
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+};
+
+const link = {
+    display: 'block',
+    cursor: 'pointer',
+    fontFamily: 'Roboto Mono',
+    ...theme.aside.navigation.links.inactive,
+    '&:hover': {
+        ...theme.aside.navigation.links.inactive.over,
+    },
+    '.active': {
+        ...theme.aside.navigation.links.active
+    }
+};
+
 const styles = {
     aside: {
         position: 'fixed',
@@ -24,24 +43,25 @@ const styles = {
         height: 'calc(100vh - 100px)',
         overflow: 'auto',
         '> ul': {
-            listStyle: 'none',
-            padding: 0,
-            margin: 0,
+            ...ul,
             '> li': {
                 marginTop: '10px',
                 padding: '5px',
                 '> a': {
-                    display: 'block',
+                    ...link,
                     padding: '10px',
-                    cursor: 'pointer',
                     fontSize: '24px',
-                    fontFamily: 'Roboto Mono',
-                    ...theme.aside.navigation.links.inactive,
-                    '&:hover': {
-                        ...theme.aside.navigation.links.inactive.over,
-                    },
-                    '.active': {
-                        ...theme.aside.navigation.links.active
+                },
+                '> ul': {
+                    ...ul,
+                    '> li': {
+                        marginTop: '10px',
+                        padding: '5px 20px',
+                        '> a': {
+                            ...link,
+                            padding: '5px 10px',
+                            fontSize: '18px',
+                        },
                     }
                 }
             }
