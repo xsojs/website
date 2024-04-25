@@ -37,7 +37,13 @@ const theme = {
         background: vars.backgroundDark,
     },
     page: {
-        background: '#F1F2F3',
+        ' code': {
+            padding: '0 5px',
+            margin: '0 3px',
+            fontFamily: 'Roboto Mono',
+            background: vars.backgroundDark,
+            border: `1px solid ${vars.tertiary}`,
+        }
     },
     footer: {
         background: vars.backgroundDark,

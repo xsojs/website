@@ -58,7 +58,7 @@ function Home() {
                     ]
                 } }, // div.introduction
                 { [Title]: {
-                    content: 'Firt Look'
+                    content: 'First Look'
                 } },
                 { p: {
                     _: 'See this basic example very carefully.'

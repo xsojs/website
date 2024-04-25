@@ -1,12 +1,12 @@
-
 import theme from "../../styles/theme";
 
 const styles = {
     code: {
-        background: '#d1d1d1',
+        ...theme.blockSpace,
+        padding: '20px',
+        ...theme.codeBlock,
         fontFamily: '"Roboto Mono"',
-        padding: '0 10px',
-        borderRadius: '5px'
+        padding: '5px 10px'
     }
 };
 

@@ -3,6 +3,7 @@ import vars from "../../styles/vars";
 
 const styles = {
     main: {
+        ...theme.page,
         minHeight: 'calc(100vh - 285px)',
         [theme.media.desktop]: {
             marginLeft: `${vars.aside.width}px`,

@@ -3,10 +3,10 @@ import css from "@xso/css";
 
 import styles from "./styles";
 
-function Title({ content }) {
+function Title({ content, level = 1 }) {
     this.view(() => [
-        { h1: {
-            class: css(styles.title),
+        { [`h${level}`]: {
+            class: css(styles.title, styles[`level${level}`]),
             _: content
         } }
     ]);

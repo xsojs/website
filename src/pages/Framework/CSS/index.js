@@ -5,6 +5,9 @@ import Title from "../../../components/Title";
 
 import theme from "../../../styles/theme";
 
+import Install from "./Install";
+import HowToUse from "./HowToUse";
+
 function CSS() {
     this.view(() => [
         { div: {
@@ -13,16 +16,14 @@ function CSS() {
                 { [Title]: {
                     content: 'CSS'
                 } },
-                { div: {
-                    _: [
-                        { p: {
-                            _: 'A reactive UI framework, pure JavaScript, no compilations, and all in one.'
-                        } },
-                        { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
-                        } }
-                    ]
+                { p: {
+                    _: 'Here is the CSS module, with this you will be able to create all your style dinamically with advanced technics.'
                 } },
+                { p: {
+                    _: 'The same techniques are found in others, such as LESS, SASS/SCSS, and StyleX.'
+                } },
+                { [Install]: { } },
+                { [HowToUse]: { } }
             ]
         } }
     ]);

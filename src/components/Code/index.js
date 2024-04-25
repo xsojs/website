@@ -3,11 +3,11 @@ import css from "@xso/css";
 
 import styles from "./styles";
 
-function Code({text}) {
+function Code({_}) {
     this.view(()=> [
         { span: {
                 class: css(styles.code),
-                _: text
+                _
         } }
     ]);
 }
