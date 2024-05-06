@@ -10,6 +10,7 @@ const link = {
     display: 'block',
     cursor: 'pointer',
     fontFamily: 'Roboto Mono',
+    textDecoration: 'none',
     ...theme.aside.navigation.links.inactive,
     '&:hover': {
         ...theme.aside.navigation.links.inactive.over,
@@ -56,12 +57,30 @@ const styles = {
                     ...ul,
                     '> li': {
                         marginTop: '10px',
+                        '&:first-child': {
+                            marginTop: '-10px'
+                        },
                         padding: '5px 20px',
                         '> a': {
                             ...link,
                             padding: '5px 10px',
                             fontSize: '18px',
                         },
+                        '> ul': {
+                            ...ul,
+                            '> li': {
+                                marginTop: '5px',
+                                '&:first-child': {
+                                    marginTop: '-10px'
+                                },
+                                padding: '5px 10px 5px 20px',
+                                '> a': {
+                                    ...link,
+                                    padding: '5px 10px',
+                                    fontSize: '18px',
+                                },
+                            }
+                        }
                     }
                 }
             }

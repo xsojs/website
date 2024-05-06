@@ -91,6 +91,8 @@ function Home() {
                                         } })
                                     ]);
                                 }
+
+                                export default com(Code)
                             `
                         } }, // CodeTabs.Tab[0]
                         { [CodeTabs.Tab]: {

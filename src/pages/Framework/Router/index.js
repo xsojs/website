@@ -2,6 +2,8 @@ import com from "@xso/com";
 import css from "@xso/css";
 
 import Title from "../../../components/Title";
+import Install from "./Install";
+import HowToUse from "./HowToUse";
 
 import theme from "../../../styles/theme";
 
@@ -23,6 +25,8 @@ function Router() {
                         } }
                     ]
                 } },
+                { [Install]: { } },
+                { [HowToUse]: { } },
             ]
         } }
     ]);

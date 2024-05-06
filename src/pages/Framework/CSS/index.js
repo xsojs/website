@@ -7,6 +7,8 @@ import theme from "../../../styles/theme";
 
 import Install from "./Install";
 import HowToUse from "./HowToUse";
+import Selectors from "./Selectors";
+import MediaQuery from "./MediaQuery";
 
 function CSS() {
     this.view(() => [
@@ -23,7 +25,9 @@ function CSS() {
                     _: 'The same techniques are found in others, such as LESS, SASS/SCSS, and StyleX.'
                 } },
                 { [Install]: { } },
-                { [HowToUse]: { } }
+                { [HowToUse]: { } },
+                { [Selectors]: { } },
+                { [MediaQuery]: { } }
             ]
         } }
     ]);

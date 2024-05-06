@@ -1,14 +1,10 @@
 import com from "@xso/com";
 
-import Anchor from "../../../../components/Anchor";
 import Title from "../../../../components/Title";
 import CodeBlock from "../../../../components/CodeBlock";
 
 function HowToUse() {
     this.view(() => [
-        { [Anchor]: {
-            name: 'how-to-use'
-        } },
         { [Title]: {
             level: 3,
             content: 'How To Use'
@@ -53,38 +49,12 @@ function HowToUse() {
             function MyXSOComponent() {
                 this.view(()=> [
                     { div: {
-                        class: css(styles.myFirstStyle),
-                        _: 'My component styled!',
+                        _: 'My XSO component!',
                     } }
                 ]);
             }
 
             export default com(MyXSOComponent);
-            `
-        }},
-        { [Title]: {
-            level: 5,
-            content: 'React Component'
-        } },
-        { p: {
-            _: 'Here is a simple example of the integration with React component:'
-        } },
-        { [CodeBlock]: {
-            source: `
-            import React from 'react';
-            import css from '@xso/css';
-
-            import styles from './styles.js';
-
-            function MyReactComponent() {
-                return (
-                    <div className={ css(styles.myFirstStyle) }>
-                        My React Component styled with XSO.
-                    </div>
-                );
-            }
-
-            export default MyReactComponent;
             `
         }},
         { [Title]: {
@@ -102,23 +72,24 @@ function HowToUse() {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Styled by XSO</title>
+                <title>Components by XSO</title>
             </head>
             <body>
-                <h1>XSO CSS</h1>
-                <div id="myElement">My component styled!</div>
-                <script src="https://github.com/xsojs/css/dist/xso-css.umd.js"></script>
+                <h1>XSO Component</h1>
+                <div id="myElement"></div>
+                <script src="https://github.com/xsojs/com/dist/xso-com.umd.js"></script>
                 <script>
-                const styles = {
-                    myFirstStyle: {
-                        fontSize: '16px',
-                        border: '3px solid blue',
-                        backgroundColor: 'red',
-                        color: 'yellow',
-                    }
+                function MyXSOComponent({_}) {
+                    this.view(()=> [
+                        { div: {
+                            _,
+                        } }
+                    ]);
                 }
-                document.getElementById('myElement').className = css(
-                    styles.myFirstStyle
+                com.create(
+                    document.getElementById('myElement'), // DOM Element
+                    com(MyXSOComponent), // Component Initialized
+                    {_: 'My XSO component!'} // Props
                 );
                 </script>
             </body>
