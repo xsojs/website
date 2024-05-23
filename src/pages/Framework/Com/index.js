@@ -4,6 +4,10 @@ import css from "@xso/css";
 import Title from "../../../components/Title";
 import Install from "./Install";
 import HowToUse from "./HowToUse";
+import Properties from "./Properties";
+import State from "./State";
+import Changes from "./Changes";
+import Reference from "./Reference";
 
 import theme from "../../../styles/theme";
 
@@ -27,6 +31,10 @@ function Com() {
                 } },
                 { [Install]: { } },
                 { [HowToUse]: { } },
+                { [Properties]: { } },
+                { [State]: { } },
+                { [Changes]: { } },
+                { [Reference]: { } },
             ]
         } }
     ]);

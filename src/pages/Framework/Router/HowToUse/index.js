@@ -1,10 +1,14 @@
 import com from "@xso/com";
 
+import Anchor from "../../../../components/Anchor";
 import Title from "../../../../components/Title";
 import CodeBlock from "../../../../components/CodeBlock";
 
 function HowToUse() {
     this.view(() => [
+        { [Anchor]: {
+            name: 'how-to-use'
+        } },
         { [Title]: {
             level: 3,
             content: 'How To Use'

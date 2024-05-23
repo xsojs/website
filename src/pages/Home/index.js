@@ -61,7 +61,7 @@ function Home() {
                     content: 'First Look'
                 } },
                 { p: {
-                    _: 'See this basic example very carefully.'
+                    _: 'Please open your mind and see this basic example very carefully.'
                 } },
                 { [CodeTabs]: {
                     tabs: [
@@ -116,7 +116,7 @@ function Home() {
                     ]
                 } }, // CodeTabs
                 { p: {
-                    _: 'You may be thinking: Is all integrated in a single code language!?'
+                    _: 'You may be thinking: Is all integrated in a single code language!? Pure JavaScrit!?'
                 } },
                 { p: {
                     _: `Yes is it! Let's put your hands and see it.`

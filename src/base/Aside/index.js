@@ -47,6 +47,46 @@ function Aside() {
                                                 _: { [Navigate]: {
                                                     to: '/framework/com',
                                                     _: 'Components'
+                                                } },
+                                                subMenu: { [SubMenu]: {
+                                                    _: [
+                                                        { [Item]: { // Install
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#install',
+                                                                _: 'Install'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // How to Use
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#how-to-use',
+                                                                _: 'How to Use'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Properties
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#properties',
+                                                                _: 'Properties'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // State
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#state',
+                                                                _: 'State'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Changes
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#changes',
+                                                                _: 'Changes'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Reference
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#reference',
+                                                                _: 'Reference'
+                                                            } }
+                                                        }},
+                                                    ]
                                                 } }
                                             }}, // Item.Components
                                             { [Item]: { // CSS
@@ -57,26 +97,26 @@ function Aside() {
                                                 subMenu: { [SubMenu]: {
                                                     _: [
                                                         { [Item]: { // Install
-                                                            _: { a: {
-                                                                href: '#install',
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/css#install',
                                                                 _: 'Install'
                                                             } }
                                                         }},
                                                         { [Item]: { // How to Use
-                                                            _: { a: {
-                                                                href: '#how-to-use',
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/css#how-to-use',
                                                                 _: 'How to Use'
                                                             } }
                                                         }},
                                                         { [Item]: { // Selectors
-                                                            _: { a: {
-                                                                href: '#selectors',
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/css#selectors',
                                                                 _: 'Selectors'
                                                             } }
                                                         }},
                                                         { [Item]: { // Media Query
-                                                            _: { a: {
-                                                                href: '#media-query',
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/css#media-query',
                                                                 _: 'Media Query'
                                                             } }
                                                         }},
@@ -87,6 +127,22 @@ function Aside() {
                                                 _: { [Navigate]: {
                                                     to: '/framework/router',
                                                     _: 'Router'
+                                                } },
+                                                subMenu: { [SubMenu]: {
+                                                    _: [
+                                                        { [Item]: { // Install
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/router#install',
+                                                                _: 'Install'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // How to Use
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/router#how-to-use',
+                                                                _: 'How to Use'
+                                                            } }
+                                                        }},
+                                                    ]
                                                 } }
                                             }}, // Item.Router
                                         ]

@@ -1,10 +1,14 @@
 import com from "@xso/com";
 
+import Anchor from "../../../../components/Anchor";
 import Title from "../../../../components/Title";
 import Code from "../../../../components/Code";
 
 function Install() {
     this.view(() => [
+        { [Anchor]: {
+            name: 'install'
+        } },
         { [Title]: {
             level: 3,
             content: 'Install'
