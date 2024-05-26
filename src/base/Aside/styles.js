@@ -28,12 +28,30 @@ const styles = {
         zIndex: 1,
         ...theme.aside,
         [theme.media.mobile]: {
-            display: 'none',
+            height: '100px',
+            overflow: 'hidden'
         },
     },
-    logo: {
+    asideOpen: {
+        [theme.media.mobile]: {
+            height: '100%',
+            overflow: 'visible'
+        },
+    },
+    top: {
         padding: '15px 0',
-        textAlign: 'center',
+        textAlign: 'center'
+    },
+    logo: {
+        '> img': {
+            height: '70px'
+        }
+    },
+    menu: {
+        display: {
+            default: 'none',
+            [theme.media.mobile]: 'block'
+        },
         '> img': {
             height: '70px'
         }
