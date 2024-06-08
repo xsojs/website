@@ -15,13 +15,17 @@ const styles = {
         height: '100px',
     },
     links: {
-        textAlign: 'right',
+        display: 'flex',
+        alignItems: 'right',
+        justifyContent: 'right',
         marginTop: '10px',
         '> a': {
-            color: 'white',
-            '> img': {
+            ...theme.svgLink,
+            '> span > img': {
                 height: '40px',
-                fill: 'white'
+            },
+            '> span > svg': {
+                height: '40px',
             }
         }
     }

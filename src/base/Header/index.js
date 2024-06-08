@@ -1,10 +1,13 @@
 import com from "@xso/com";
 import css from "@xso/css";
 
+import SVG from "../../components/SVG";
+
 import theme from "../../styles/theme";
 import styles from "./styles";
 
 function Header() {
+    const refGitHub = this.ref();
     this.view(() => [
         { header: {
             class: css(theme.header, styles.header),
@@ -18,11 +21,9 @@ function Header() {
                                 { a: {
                                     target: '_blank',
                                     href: 'https://github.com/xsojs/',
-                                    _: [
-                                        { img: {
-                                            src: '/images/github.svg'
-                                        } }
-                                    ]
+                                    _: { [SVG]: {
+                                        src: '/images/github.svg'
+                                    } }
                                 }}
                             ]
                         } }

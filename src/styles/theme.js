@@ -82,6 +82,19 @@ const theme = {
             }
         }
     },
+    svgLink: {
+        ' > span > svg path': {
+            fill: `${vars.secondary} !important`,
+            stroke: `${vars.tertiary}`,
+            strokeWidth: `20`,
+        },
+        ':hover > span > svg': {
+            ' path': {
+                fill: `${vars.primary} !important`
+            },
+            filter: `drop-shadow(0 0 2px ${vars.tertiary})`,
+        }
+    }
 };
 
 export default theme;

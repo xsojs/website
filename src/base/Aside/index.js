@@ -7,17 +7,26 @@ import styles from "./styles";
 import { Navigate } from "@xso/router";
 
 import Menu from "../../components/Menu";
+import SVG from "../../components/SVG";
 
 const {SubMenu, Item} = Menu;
 
 function Aside() {
     const refAside = this.ref();
     const refMenuImage = this.ref();
+    const refCloseImage = this.ref();
     const menuOpened = this.state(false);
-    this.changes([menuOpened], () => {
-        refMenuImage.current.src = menuOpened.val ? '/images/close.svg' : '/images/menu.svg';
+    const onMenuClicked = ()=> {
+        if (menuOpened.val) {
+            refMenuImage.current._hide();
+            refCloseImage.current._show();
+        } else {
+            refMenuImage.current._show();
+            refCloseImage.current._hide();
+        }
         refAside.current.className = css(theme.aside, styles.aside, menuOpened.val ? styles.asideOpen : {});
-    });
+    };
+    this.changes([menuOpened], onMenuClicked);
     trigger.set('ASIDE-MENU-HIDE', () => {
         //refAside.current.className = css(theme.aside, styles.aside);
     });
@@ -32,17 +41,20 @@ function Aside() {
                 { div: { // top
                     class: css(styles.top),
                     _: [
-                        { div: { // menu
+                        { a: { // menu
                             class: css(styles.menu),
                             onClick: ()=> {
                                 menuOpened.val = !menuOpened.val;
                             },
                             _: [
-                                refMenuImage.set({ img: {
+                                refMenuImage.set({ [SVG]: {
                                     src: '/images/menu.svg'
+                                } }),
+                                refCloseImage.set({ [SVG]: {
+                                    src: '/images/close.svg'
                                 } })
                             ]
-                        } }, // div.menu
+                        } }, // a.menu
                         { div: { // logo
                             class: css(styles.logo),
                             _: [
@@ -219,6 +231,7 @@ function Aside() {
             ]
         } }) // aside
     ]);
+    window.setTimeout(onMenuClicked, 0);
 }
 
 export default com(Aside);

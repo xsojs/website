@@ -40,7 +40,9 @@ const styles = {
     },
     top: {
         padding: '15px 0',
-        textAlign: 'center'
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     logo: {
         '> img': {
@@ -52,8 +54,12 @@ const styles = {
             default: 'none',
             [theme.media.mobile]: 'block'
         },
-        '> img': {
-            height: '70px'
+        ...theme.svgLink,
+        '> span > img': {
+            height: '70px',
+        },
+        '> span > svg': {
+            height: '70px',
         }
     },
     navigation: {

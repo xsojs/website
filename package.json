@@ -27,11 +27,12 @@
         "utility"
     ],
     "dependencies": {
+        "@iconfu/svg-inject": "^1.2.3",
         "@xso/com": "link:../com",
         "@xso/css": "link:../css",
-        "@xso/utils": "link:../utils",
         "@xso/router": "link:../router",
         "@xso/trigger": "link:../trigger",
+        "@xso/utils": "link:../utils",
         "highlight.js": "^11.9.0"
     },
     "devDependencies": {
