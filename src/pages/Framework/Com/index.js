@@ -8,6 +8,8 @@ import Properties from "./Properties";
 import State from "./State";
 import Changes from "./Changes";
 import Reference from "./Reference";
+import Mount from "./Mount";
+import Unmount from "./Unmount";
 
 import theme from "../../../styles/theme";
 
@@ -22,10 +24,13 @@ function Com() {
                 { div: {
                     _: [
                         { p: {
-                            _: 'A reactive UI framework, pure JavaScript, no compilations, and all in one.'
+                            _: 'This is the componentization module, that creates reactive UI in the browser.'
                         } },
                         { p: {
-                            _: 'Components, States, Properties, References, Global Events, CSS engine, and more.'
+                            _: 'With no compilations, it is pure JavaScript and can be used directly in HTML.'
+                        } },
+                        { p: {
+                            _: 'Supports components, states, properties, references, and more.'
                         } }
                     ]
                 } },
@@ -35,6 +40,8 @@ function Com() {
                 { [State]: { } },
                 { [Changes]: { } },
                 { [Reference]: { } },
+                { [Mount]: { } },
+                { [Unmount]: { } },
             ]
         } }
     ]);

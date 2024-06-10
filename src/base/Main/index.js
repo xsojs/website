@@ -10,6 +10,7 @@ import Framework from '../../pages/Framework';
 import FrameworkCom from '../../pages/Framework/Com';
 import FrameworkCSS from '../../pages/Framework/CSS';
 import FrameworkRouter from '../../pages/Framework/Router';
+import FrameworkTrigger from '../../pages/Framework/Trigger';
 
 import styles from "./styles";
 
@@ -45,6 +46,10 @@ function Main() {
                                 { [Route]: {
                                         path: '/framework/router',
                                         component: FrameworkRouter
+                                } },
+                                { [Route]: {
+                                        path: '/framework/trigger',
+                                        component: FrameworkTrigger
                                 } },
                                 { [Route]: {
                                         path: '/product/{uid}/{name}',

@@ -26,6 +26,7 @@ function Aside() {
         }
         refAside.current.className = css(theme.aside, styles.aside, menuOpened.val ? styles.asideOpen : {});
     };
+    this.mount(onMenuClicked);
     this.changes([menuOpened], onMenuClicked);
     trigger.set('ASIDE-MENU-HIDE', () => {
         //refAside.current.className = css(theme.aside, styles.aside);
@@ -135,6 +136,20 @@ function Aside() {
                                                                 _: 'Reference'
                                                             } }
                                                         }},
+                                                        { [Item]: { // Mount
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#mount',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Mount'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Unmount
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/com#unmount',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Unmount'
+                                                            } }
+                                                        }},
                                                     ]
                                                 } }
                                             }}, // Item.Components
@@ -214,6 +229,65 @@ function Aside() {
                                                     ]
                                                 } }
                                             }}, // Item.Router
+                                            { [Item]: { // Trigger
+                                                _: { [Navigate]: {
+                                                    to: '/framework/trigger',
+                                                    _: 'Trigger'
+                                                } },
+                                                subMenu: { [SubMenu]: {
+                                                    _: [
+                                                        { [Item]: { // Install
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#install',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Install'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // How to Use
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#how-to-use',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'How to Use'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Add
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#add',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Add'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Set
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#set',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Set'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Del
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#del',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Del'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Remove
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#remove',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Remove'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Clear
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#clear',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Clear'
+                                                            } }
+                                                        }},
+                                                    ]
+                                                } }
+                                            }}, // Item.Trigger
                                         ]
                                     } } // SubMenu
                                 }}, // Item.Framework
@@ -231,7 +305,6 @@ function Aside() {
             ]
         } }) // aside
     ]);
-    window.setTimeout(onMenuClicked, 0);
 }
 
 export default com(Aside);

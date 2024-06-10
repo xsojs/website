@@ -7,6 +7,16 @@ css.def('*', {
     fontSize: '20px'
 })
 
+css.def('a', {
+    color: vars.secondary,
+    textDecoration: 'none',
+    textShadow: `0 0 2px ${vars.secondary}`,
+    ':hover': {
+        color: vars.primary,
+        textShadow: `0 0 2px ${vars.secondary}, 0 0 2px ${vars.secondary}`,
+    }
+})
+
 const theme = {
     media: {
         mobile: '@media only screen and (max-width: 768px)',

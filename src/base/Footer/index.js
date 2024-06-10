@@ -16,7 +16,66 @@ function Footer() {
                             { div: {
                                 class: css(theme.frame),
                                 _: [
-                                    'Footer...'
+                                    { p: {
+                                        _: [
+                                            'GitHub organization: ',
+                                            { a: {
+                                                href: "https://github.com/xsojs",
+                                                target: '_blank',
+                                                _: 'github.com/xsojs'
+                                            }}
+                                        ]
+                                    } },
+                                    { p: {
+                                        _: [
+                                            'Componentization: ',
+                                            { a: {
+                                                href: "https://github.com/xsojs/com",
+                                                target: '_blank',
+                                                _: 'github.com/xsojs/com'
+                                            }}
+                                        ]
+                                    } },
+                                    { p: {
+                                        _: [
+                                            'CSS generator: ',
+                                            { a: {
+                                                href: "https://github.com/xsojs/css",
+                                                target: '_blank',
+                                                _: 'github.com/xsojs/css'
+                                            }}
+                                        ]
+                                    } },
+                                    { p: {
+                                        _: [
+                                            'Route navigation: ',
+                                            { a: {
+                                                href: "https://github.com/xsojs/router",
+                                                target: '_blank',
+                                                _: 'github.com/xsojs/router'
+                                            }}
+                                        ]
+                                    } },
+                                    { p: {
+                                        _: [
+                                            'Trigger global events: ',
+                                            { a: {
+                                                href: "https://github.com/xsojs/trigger",
+                                                target: '_blank',
+                                                _: 'github.com/xsojs/trigger'
+                                            }}
+                                        ]
+                                    } },
+                                    { p: {
+                                        _: [
+                                            'This website is made with XSO: ',
+                                            { a: {
+                                                href: "https://github.com/xsojs/website",
+                                                target: '_blank',
+                                                _: 'github.com/xsojs/website'
+                                            }}
+                                        ]
+                                    } }
                                 ]
                             } }
                         ]
