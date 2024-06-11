@@ -6,7 +6,7 @@ const styles = {
         padding: '20px',
         ...theme.codeBlock,
         fontFamily: '"Roboto Mono"',
-        padding: '5px 10px'
+        padding: '0 5px'
     }
 };
 

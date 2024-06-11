@@ -24,24 +24,22 @@ function HowToUse() {
 
                 function Main() {
                     this.view(()=> [
-                        {
-                            main: {
-                                _: [
-                                    { [Router]: {
-                                        routes: [
-                                            { [Route]: {
-                                                path: '/',
-                                                component: Home
-                                            } },
-                                            { [Route]: {
-                                                path: '/product/{uid}/{name}',
-                                                component: Product
-                                            } }
-                                        ]
-                                    } } // Router
-                                ]
-                            } // Main
-                        }
+                        { main: {
+                            _: [
+                                { [Router]: {
+                                    routes: [
+                                        { [Route]: {
+                                            path: '/',
+                                            component: Home
+                                        } },
+                                        { [Route]: {
+                                            path: '/product/{uid}/{name}',
+                                            component: Product
+                                        } }
+                                    ]
+                                } } // Router
+                            ]
+                        } } // Main
                     ]);
                 }
 

@@ -250,6 +250,13 @@ function Aside() {
                                                                 _: 'How to Use'
                                                             } }
                                                         }},
+                                                        { [Item]: { // Get
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#get',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Get'
+                                                            } }
+                                                        }},
                                                         { [Item]: { // Add
                                                             _: { [Navigate]: {
                                                                 to: '/framework/trigger#add',
@@ -271,18 +278,18 @@ function Aside() {
                                                                 _: 'Del'
                                                             } }
                                                         }},
-                                                        { [Item]: { // Remove
-                                                            _: { [Navigate]: {
-                                                                to: '/framework/trigger#remove',
-                                                                onClick: onMenuNavigateClick,
-                                                                _: 'Remove'
-                                                            } }
-                                                        }},
                                                         { [Item]: { // Clear
                                                             _: { [Navigate]: {
                                                                 to: '/framework/trigger#clear',
                                                                 onClick: onMenuNavigateClick,
                                                                 _: 'Clear'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Purge
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#purge',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Purge'
                                                             } }
                                                         }},
                                                     ]

@@ -15,7 +15,7 @@ function Install() {
         } },
         { p: {
             _: [
-                'Install the Router module where you have your ',
+                'Install the Trigger module where you have your ',
                 { code: {
                     _: 'package.json'
                 }},
@@ -23,19 +23,19 @@ function Install() {
             ]
         } },
         { [Code]: {
-            _: 'npm install -S @xso/router'
+            _: 'npm install -S @xso/trigger'
         }},
         { p: {
             _: 'Even better is to use the PNPM:'
         } },
         { [Code]: {
-            _: 'pnpm install @xso/router'
+            _: 'pnpm install @xso/trigger'
         }},
         { p: {
             _: 'Or if you prefer with Yarn: '
         } },
         { [Code]: {
-            _: 'yarn add -S @xso/router'
+            _: 'yarn add -S @xso/trigger'
         }},
         { p: {
             _: 'Any other package manager can be used as well.'

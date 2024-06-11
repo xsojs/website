@@ -3,6 +3,7 @@ import css from "@xso/css";
 
 import styles from "./styles";
 import CodeBlock from "../CodeBlock";
+import CodeDemo from "../CodeDemo";
 
 const CodeTabs = com(function ({tabs}) {
     com.ensureType(tabs, CodeTabs.Tab);
@@ -40,7 +41,7 @@ const CodeTabs = com(function ({tabs}) {
     });
 })
 
-CodeTabs.Tab = com(function ({source, active = false}) {
+CodeTabs.Tab = com(function ({source, demo, active = false}) {
     const visible = this.state(active);
     this.onShow = () => {
         visible.$val = true;
@@ -50,11 +51,20 @@ CodeTabs.Tab = com(function ({source, active = false}) {
     }
     this.view(() => {
         if (visible.val) {
-            return [
-                { [CodeBlock]: {
-                    source
-                } }
-            ]
+            if (source) {
+                return [
+                    { [CodeBlock]: {
+                        source
+                    } }
+                ];
+            }
+            if (demo) {
+                return [
+                    { [CodeDemo]: {
+                        _: demo
+                    } }
+                ];
+            }
         }
         return [];
     });
