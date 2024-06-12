@@ -15,11 +15,7 @@ function Navigate() {
             content: 'Navigate'
         } },
         { p: {
-            _: [
-                'A component that generates a link used to change the URL and the router will navigate to the related content. ',
-                { code: { _: 'styles.js' } },
-                '.'
-            ]
+            _: 'A component that generates a link used to change the URL and the router will navigate to the related content.'
         } },
         { p: {
             _: 'Then to easily create links to navigate to a certain content, this component is very useful.'

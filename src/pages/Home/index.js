@@ -17,7 +17,7 @@ function Home() {
             class: css(theme.frame),
             _: [
                 { [Title]: {
-                    content: 'UI Framework'
+                    content: 'JS Reactive UI Framework'
                 } },
                 { [Row]: {
                     _: [
