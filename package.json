@@ -1,7 +1,7 @@
 {
     "name": "@xso/website",
     "version": "0.1.0",
-    "description": "Website of the XSO.",
+    "description": "Website of the XSO framework.",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -13,33 +13,21 @@
     "license": "MIT",
     "repository": "xsojs/website",
     "keywords": [
-        "react",
-        "vue",
-        "jquery",
-        "css",
-        "less",
-        "sass",
-        "scss",
-        "style",
-        "stylex",
-        "simple",
-        "util",
-        "utility"
+        "xso",
+        "xsojs"
     ],
     "dependencies": {
         "@iconfu/svg-inject": "^1.2.3",
-        "@xso/com": "link:../com",
-        "@xso/css": "link:../css",
-        "@xso/router": "link:../router",
-        "@xso/trigger": "link:../trigger",
-        "@xso/utils": "link:../utils",
+        "@xso/com": "^0.1.0",
+        "@xso/css": "^0.1.0",
+        "@xso/router": "^0.1.1",
+        "@xso/trigger": "^0.1.0",
         "highlight.js": "^11.9.0"
     },
     "devDependencies": {
         "vite": "^4.3.9"
     },
     "files": [
-        "dist",
         "src"
     ]
 }
