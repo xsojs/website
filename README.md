@@ -1,4 +1,4 @@
 
 # Official Website of the XSO
 
-- [xsojs.dev](https://www.xsojs.dev/)
+- [xsojs.dev](https://xsojs.dev/)
