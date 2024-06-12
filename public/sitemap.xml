@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:mobile="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://www.xsojs.dev/</loc>
+        <loc>https://xsojs.dev/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.xsojs.dev/framework</loc>
+        <loc>https://xsojs.dev/framework</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.xsojs.dev/framework/com</loc>
+        <loc>https://xsojs.dev/framework/com</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.xsojs.dev/framework/css</loc>
+        <loc>https://xsojs.dev/framework/css</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.xsojs.dev/framework/router</loc>
+        <loc>https://xsojs.dev/framework/router</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.xsojs.dev/framework/trigger</loc>
+        <loc>https://xsojs.dev/framework/trigger</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.xsojs.dev/about</loc>
+        <loc>https://xsojs.dev/about</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
