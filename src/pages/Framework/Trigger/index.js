@@ -8,6 +8,7 @@ import Get from "./Get";
 import Add from "./Add";
 import Set from "./Set";
 import Del from "./Del";
+import Events from "./Events";
 
 import theme from "../../../styles/theme";
 
@@ -38,6 +39,7 @@ function Trigger() {
                 { [Add]: { } },
                 { [Set]: { } },
                 { [Del]: { } },
+                { [Events]: { } },
             ]
         } }
     ]);

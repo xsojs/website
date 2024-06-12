@@ -4,26 +4,25 @@ import trigger from "@xso/trigger";
 const MY_TRIGGER_KEY = 'EXAMPLE_GET';
 
 function MyComponent() {
-    const myTriggerFunc1 = ()=> alert('Ding...');
-    const myTriggerFunc2 = ()=> alert('Dong!');
+    const myClient1 = (message)=> console.log('Client 1:', message);
+    const myClient2 = (message)=> console.log('Client 2:', message);
     this.mount(()=> {
-        trigger.add(MY_TRIGGER_KEY, myTriggerFunc1);
-        trigger.add(MY_TRIGGER_KEY, myTriggerFunc2);
+        trigger.add(MY_TRIGGER_KEY, myClient1);
+        trigger.add(MY_TRIGGER_KEY, myClient2);
+        trigger(MY_TRIGGER_KEY, 'Hello world!');
     });
     this.view(()=> [
         { button: {
             onClick: ()=> {
-                const triggers = trigger.get(MY_TRIGGER_KEY);
-                console.log(
-                    `Trigger: ${triggers.length} functions assigned to the key ${MY_TRIGGER_KEY}`, 
-                    triggers
-                );
-                alert(
-                    `Have ${triggers.length} functions assigned to the key ${MY_TRIGGER_KEY}.`+
-                    `\nYou can see the functions in the console log.`
-                );
+                trigger.get(MY_TRIGGER_KEY, (message) => {
+                    alert(
+                        `The last message: ${message}`+
+                        '\n\n' +
+                        'The messages received by clients are in the console log.'
+                    );
+                });
             },
-            _: 'Get Triggers'
+            _: 'Get The Latest Args'
         } }
     ]);
 }

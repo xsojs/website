@@ -10,15 +10,15 @@ import Example from "./Example";
 function Del() {
     this.view(() => [
         { [Anchor]: {
-            name: 'get'
+            name: 'events'
         } },
         { [Title]: {
             level: 3,
-            content: 'Get'
+            content: 'Events'
         } },
         { p: {
             _: [
-                'This method retrieves all arguments passed to the latest trigger of the identification key.'
+                'This method gives all the functions assigned as events to the identification key.'
             ]
         } },
         { p: {
@@ -33,28 +33,29 @@ function Del() {
                         import com from "@xso/com";
                         import trigger from "@xso/trigger";
 
-                        const MY_TRIGGER_KEY = 'EXAMPLE_GET';
+                        const MY_TRIGGER_KEY = 'EXAMPLE_EVENT';
 
                         function MyComponent() {
-                            const myClient1 = (message)=> console.log('Client 1:', message);
-                            const myClient2 = (message)=> console.log('Client 2:', message);
+                            const myTriggerFunc1 = ()=> alert('Ding...');
+                            const myTriggerFunc2 = ()=> alert('Dong!');
                             this.mount(()=> {
-                                trigger.add(MY_TRIGGER_KEY, myClient1);
-                                trigger.add(MY_TRIGGER_KEY, myClient2);
-                                trigger(MY_TRIGGER_KEY, 'Hello world!');
+                                trigger.add(MY_TRIGGER_KEY, myTriggerFunc1);
+                                trigger.add(MY_TRIGGER_KEY, myTriggerFunc2);
                             });
                             this.view(()=> [
                                 { button: {
                                     onClick: ()=> {
-                                        trigger.get(MY_TRIGGER_KEY, (message) => {
-                                            alert(
-                                                \`The last message: \${message}\`+
-                                                '\\n\\n' +
-                                                'The messages received by clients are in the console log.'
-                                            );
-                                        });
+                                        const triggers = trigger.events(MY_TRIGGER_KEY);
+                                        console.log(
+                                            \`Trigger: \${triggers.length} events assigned to the key \${MY_TRIGGER_KEY}\`, 
+                                            triggers
+                                        );
+                                        alert(
+                                            \`Have \${triggers.length} events assigned to the key \${MY_TRIGGER_KEY}.\`+
+                                            \`\\nYou can see the functions events in the console log.\`
+                                        );
                                     },
-                                    _: 'Get The Latest Args'
+                                    _: 'Trigger Events'
                                 } }
                             ]);
                         }
@@ -74,7 +75,7 @@ function Del() {
                 { [Code]: {
                     _: 'get'
                 } },
-                ` method, the function will retrieve the latest arguments triggered to the key.`,
+                ` method, an array with all the functions events assigned to the key is returned.`,
             ]
         } },
         { p: {
@@ -83,7 +84,7 @@ function Del() {
                 { [Code]: {
                     _: 'get'
                 } },
-                ` method is useful for rescuing the latest state of arguments stored.`,
+                ` method is useful to verify if have any function event assigned to the key.`,
             ]
         } },
     ]);

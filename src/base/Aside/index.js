@@ -278,11 +278,33 @@ function Aside() {
                                                                 _: 'Del'
                                                             } }
                                                         }},
+                                                        { [Item]: { // Stored
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#stored',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Stored'
+                                                            } }
+                                                        }},
+                                                        { [Item]: { // Events
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#events',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Events'
+                                                            } }
+                                                        }},
                                                         { [Item]: { // Clear
                                                             _: { [Navigate]: {
                                                                 to: '/framework/trigger#clear',
                                                                 onClick: onMenuNavigateClick,
                                                                 _: 'Clear'
+                                                            } }
+                                                        }},
+                                                        
+                                                        { [Item]: { // Exists
+                                                            _: { [Navigate]: {
+                                                                to: '/framework/trigger#exists',
+                                                                onClick: onMenuNavigateClick,
+                                                                _: 'Exists'
                                                             } }
                                                         }},
                                                         { [Item]: { // Purge
