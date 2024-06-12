@@ -60,7 +60,7 @@ function Framework() {
                                         } },
                                         ' &middot; ',
                                         { a: {
-                                            href: "#",
+                                            href: "https://www.npmjs.com/package/@xso/com",
                                             target: "_blank",
                                             _: 'NPM'
                                         } }
@@ -92,7 +92,7 @@ function Framework() {
                                         } },
                                         ' &middot; ',
                                         { a: {
-                                            href: "#",
+                                            href: "https://www.npmjs.com/package/@xso/css",
                                             target: "_blank",
                                             _: 'NPM'
                                         } }
@@ -128,7 +128,7 @@ function Framework() {
                                         } },
                                         ' &middot; ',
                                         { a: {
-                                            href: "#",
+                                            href: "https://www.npmjs.com/package/@xso/router",
                                             target: "_blank",
                                             _: 'NPM'
                                         } }
@@ -160,7 +160,7 @@ function Framework() {
                                         } },
                                         ' &middot; ',
                                         { a: {
-                                            href: "#",
+                                            href: "https://www.npmjs.com/package/@xso/trigger",
                                             target: "_blank",
                                             _: 'NPM'
                                         } }
