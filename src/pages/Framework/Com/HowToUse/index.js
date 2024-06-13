@@ -61,7 +61,11 @@ function HowToUse() {
             <body>
                 <h1>XSO Component</h1>
                 <div id="myElement"></div>
-                <script src="https://github.com/xsojs/com/dist/xso-com.umd.js"></script>
+                <!--
+                Here is the bundle JS file to download:
+                https://github.com/xsojs/com/blob/main/dist/xso-com.umd.js
+                -->
+                <script src="xso-com.umd.js"></script>
                 <script>
                 function MyXSOComponent({_}) {
                     this.view(()=> [

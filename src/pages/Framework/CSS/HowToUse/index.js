@@ -107,7 +107,11 @@ function HowToUse() {
             <body>
                 <h1>XSO CSS</h1>
                 <div id="myElement">My component styled!</div>
-                <script src="https://github.com/xsojs/css/dist/xso-css.umd.js"></script>
+                <!--
+                Here is the bundle JS file to download:
+                https://github.com/xsojs/css/blob/main/dist/xso-css.umd.js
+                -->
+                <script src="xso-css.umd.js"></script>
                 <script>
                 const styles = {
                     myFirstStyle: {

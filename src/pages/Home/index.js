@@ -107,7 +107,7 @@ function Home() {
                                     ]);
                                 }
 
-                                export default com(MyComponent)
+                                export default com(MyComponent);
                             `
                         } }, // CodeTabs.Tab[0]: Index
                         { [CodeTabs.Tab]: {

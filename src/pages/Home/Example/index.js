@@ -34,4 +34,4 @@ function MyComponent({content}) {
     ]);
 }
 
-export default com(MyComponent)
+export default com(MyComponent);
