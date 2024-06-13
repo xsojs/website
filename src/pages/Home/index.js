@@ -7,6 +7,8 @@ import CodeTabs from "../../components/CodeTabs";
 
 import theme from "../../styles/theme";
 
+import Example from "./Example";
+
 import styles from "./styles";
 
 const {Row, Col} = Grid;
@@ -71,48 +73,78 @@ function Home() {
                             source: `
                                 import com from "@xso/com";
                                 import css from "@xso/css";
-    
+
                                 import styles from "./styles";
-    
-                                function Code({content}) {
+
+                                function MyComponent({content}) {
                                     const counter = this.state(0);
                                     const refText = this.ref();
                                     this.changes([refText], () => {
                                         refText.current.style.border = '2px solid gray';
+                                        refText.current.style.backgroundColor = 'gray';
                                     });
                                     this.view(() => [
-                                        { button: {
-                                            onClick: ()=> { counter.$value++; },
-                                            _: \`Click \${counter}\`
-                                        } },
-                                        refText.set({ div: {
-                                            class: css(styles.text),
-                                            _: content
-                                        } })
+                                        { div: {
+                                            class: css(styles.container),
+                                            _: [
+                                                { p: {
+                                                    _: \`Counter: \${counter}\`
+                                                }},
+                                                { button: {
+                                                    onClick: ()=> { counter.$val++; },
+                                                    _: '+ Add'
+                                                } },
+                                                ' ',
+                                                { button: {
+                                                    onClick: ()=> { counter.$val--; },
+                                                    _: '- Minus'
+                                                } },
+                                                refText.set({ div: {
+                                                    _: content
+                                                } })
+                                            ]
+                                        } }
                                     ]);
                                 }
 
-                                export default com(Code)
+                                export default com(MyComponent)
                             `
-                        } }, // CodeTabs.Tab[0]
+                        } }, // CodeTabs.Tab[0]: Index
                         { [CodeTabs.Tab]: {
                             label: 'styles.js',
                             source: `
-                                import theme from "../../styles/theme";
+                                import theme from "../../../styles/theme";
 
                                 const styles = {
-                                    text: {
-                                        ...theme.blockSpace,
-                                        padding: '20px',
-                                        borderRadius: '20px',
-                                        boxShadow: '0 0 10px black',
-                                        ...theme.text
+                                    container: {
+                                        '> button': {
+                                            color: 'white',
+                                            padding: '10px',
+                                            borderRadius: '20px',
+                                            border: 'none',
+                                            backgroundColor: 'gray',
+                                            ':hover': {
+                                                backgroundColor: 'black',
+                                                cursor: 'pointer',
+                                            }
+                                        },
+                                        '> div': {
+                                            ...theme.blockSpace,
+                                            padding: '20px',
+                                            borderRadius: '20px',
+                                            boxShadow: '0 0 10px black',
+                                            ...theme.text
+                                        }
                                     }
                                 };
 
                                 export default styles;
                             `
-                        } } // CodeTabs.Tab[1]
+                        } }, // CodeTabs.Tab[1]: Styles
+                        { [CodeTabs.Tab]: {
+                            label: 'Demo',
+                            demo: { [Example]: { content: 'Hello world!' } }
+                        } }, // CodeTabs.Tab[2]: Demo
                     ]
                 } }, // CodeTabs
                 { p: {
