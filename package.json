@@ -22,6 +22,7 @@
         "@xso/css": "^0.1.0",
         "@xso/router": "^0.1.1",
         "@xso/trigger": "^0.1.0",
+        "@xso/website": "file:",
         "highlight.js": "^11.9.0"
     },
     "devDependencies": {

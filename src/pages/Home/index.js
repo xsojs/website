@@ -52,10 +52,10 @@ function Home() {
                 { div: { // introduction
                     _: [
                         { p: {
-                            _: 'Here you will find a reactive UI framework, where all code is in pure JavaScript only, nothing is compiled, and you have all you need.'
+                            _: 'All code is in pure JavaScript only, nothing is compiled, and you have all you need.'
                         } },
                         { p: {
-                            _: 'All you need means Components, States, Properties, References, Global Events, a CSS engine, a Router, and much more.'
+                            _: 'With features like Components, States, Properties, References, Global Events, a CSS engine, a Router, and more.'
                         } },
                     ]
                 } }, // div.introduction
