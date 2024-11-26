@@ -1,6 +1,3 @@
-
-import theme from "../../styles/theme";
-
 const styles = {
     row: (cols) => {
         return {
